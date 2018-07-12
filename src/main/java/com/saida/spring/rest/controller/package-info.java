@@ -5,4 +5,4 @@
  * @author A668058
  *
  */
-package com.saida.test.controller;
+package com.saida.spring.rest.controller;

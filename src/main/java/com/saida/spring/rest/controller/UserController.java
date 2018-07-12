@@ -1,4 +1,4 @@
-package com.saida.test.controller;
+package com.saida.spring.rest.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.saida.test.repository.User;
-import com.saida.test.service.UserService;
+import com.saida.spring.rest.repository.User;
+import com.saida.spring.rest.service.UserService;
 
 @RestController
 public class UserController {

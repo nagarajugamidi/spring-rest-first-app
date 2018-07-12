@@ -1,4 +1,4 @@
-package com.saida.test.launcher;
+package com.saida.spring.rest.launcher;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackage;

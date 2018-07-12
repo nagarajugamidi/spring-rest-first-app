@@ -1,9 +1,9 @@
-package com.saida.test.service;
+package com.saida.spring.rest.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.saida.test.repository.User;
+import com.saida.spring.rest.repository.User;
 
 public interface UserService {
 

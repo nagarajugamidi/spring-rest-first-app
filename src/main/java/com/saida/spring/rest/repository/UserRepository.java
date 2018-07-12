@@ -1,4 +1,4 @@
-package com.saida.test.repository;
+package com.saida.spring.rest.repository;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;

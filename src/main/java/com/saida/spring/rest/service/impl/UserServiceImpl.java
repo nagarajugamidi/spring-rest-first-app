@@ -1,4 +1,4 @@
-package com.saida.test.service.impl;
+package com.saida.spring.rest.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.saida.test.repository.User;
-import com.saida.test.repository.UserRepository;
-import com.saida.test.service.UserService;
+import com.saida.spring.rest.repository.User;
+import com.saida.spring.rest.repository.UserRepository;
+import com.saida.spring.rest.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
