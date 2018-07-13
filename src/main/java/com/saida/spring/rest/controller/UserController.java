@@ -15,12 +15,13 @@ import com.saida.spring.rest.repository.User;
 import com.saida.spring.rest.service.UserService;
 
 @RestController
+@RequestMapping(value="/api/user")
 public class UserController {
 
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/User/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Optional<User> getUserById(@PathVariable Long id) {
 		return userService.getById(id);
 	}
@@ -35,24 +36,24 @@ public class UserController {
 		return users;
 	}
 
-	@RequestMapping(value = "/User", method = RequestMethod.GET)
+	@RequestMapping( method = RequestMethod.GET)
 	public List<User> getAll() {
 		return userService.getAllUsers();
 	}
 
-	@RequestMapping(value = "/User/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public HttpStatus delete(@PathVariable Long id) {
 		userService.deleteUser(id);
 		return HttpStatus.NO_CONTENT;
 	}
 
-	@RequestMapping(value = "/User", method = RequestMethod.POST)
-	public HttpStatus insertUser(@RequestBody User User) {
-		return userService.addUser(User) ? HttpStatus.CREATED : HttpStatus.BAD_REQUEST;
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	public HttpStatus insertUser(@RequestBody User user) {
+		return userService.addUser(user) ? HttpStatus.CREATED : HttpStatus.BAD_REQUEST;
 	}
 
-	@RequestMapping(value = "/User", method = RequestMethod.PUT)
-	public HttpStatus updateUser(@RequestBody User User) {
-		return userService.updateUser(User) ? HttpStatus.ACCEPTED : HttpStatus.BAD_REQUEST;
+	@RequestMapping(value = "/edit", method = RequestMethod.PUT)
+	public HttpStatus updateUser(@RequestBody User user) {
+		return userService.updateUser(user) ? HttpStatus.ACCEPTED : HttpStatus.BAD_REQUEST;
 	}
 }

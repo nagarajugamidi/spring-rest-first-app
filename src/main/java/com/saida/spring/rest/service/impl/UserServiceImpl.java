@@ -32,12 +32,12 @@ public class UserServiceImpl implements UserService {
 		userRepository.deleteById(userId);
 	}
 
-	public boolean addUser(User User) {
-		return userRepository.save(User) != null;
+	public boolean addUser(User user) {
+		return userRepository.save(user) != null;
 	}
 
-	public boolean updateUser(User User) {
-		return userRepository.save(User) != null;
+	public boolean updateUser(User user) {
+		return userRepository.save(user) != null;
 	}
 
 }

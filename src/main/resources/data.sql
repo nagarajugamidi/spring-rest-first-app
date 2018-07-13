@@ -1,5 +1,5 @@
 INSERT INTO USER (ID,FST_NAM,LST_NAM) values 
 (1,'FST-NAM-1','LST-NAM-1'),
 (2,'FST-NAM-2','LST-NAM-2'),
-(3,'FST-NAM-3','LST-NAM-3'),
+(3,'FST-NAM-3','LST-NAM-3');
 commit;
