@@ -3,13 +3,18 @@ package com.saida.spring.rest.repository;
 import java.io.Serializable;
 import java.sql.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
 import org.springframework.util.StringUtils;
 
 @Entity
@@ -39,11 +44,19 @@ public class User implements Serializable {
 	private Date dob;
 
 	@Column(name = "ADDR")
+	@Basic(fetch = FetchType.LAZY)
 	private String address;
 
-	public User() {
-		super();
+	@Column(name = "STS")
+	@Enumerated(EnumType.STRING)
+	private Status status;
 
+	public enum Status {
+		CREATED, ACTIVE, INACTIVE;
+	}
+
+	public User() {
+		this.status = User.Status.CREATED;
 	}
 
 	public User(String firstName, String lastName, String email, String contactNo, Date dob, String address) {
