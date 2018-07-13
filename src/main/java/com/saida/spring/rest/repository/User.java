@@ -130,6 +130,15 @@ public class User implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 
 	@Override
 	public int hashCode() {
