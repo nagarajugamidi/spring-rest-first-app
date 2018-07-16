@@ -5,7 +5,7 @@
 	<name>spring-rest-first-app</name>
 	<description>Spring Boot with Rest example</description>
 
-	<!-- rest-parent declared to seperate all common dependecies. -->
+	<!-- rest-parent declared to separate all common dependencies. -->
 	<parent>
 		<relativePath>../rest-parent/pom.xml</relativePath>
 		<groupId>com.saida.spring.rest</groupId>
